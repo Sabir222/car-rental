@@ -12,7 +12,11 @@ const Navbar = () => {
       <div className="bg-white  w-full sm:h-[70px] h-[300px] shadow-lg">
         <div className="flex max-w-[1300px] mx-auto md:items-center justify-between">
           <div className=" p-4  flex gap-8 flex-col sm:flex-row">
-            <img src="public/logo.png" className="w-16" alt="logo" />
+            <img
+              src="../assets/logo.png"
+              className="w-16"
+              alt="logo"
+            />
             <input
               type="text"
               className="border rounded-3xl sm:w-[350px] h-10 px-7 w-[300px]"
