@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="flex max-w-[1300px] mx-auto md:items-center justify-between">
           <div className=" px-4 pt-2  flex gap-8 flex-col sm:flex-row">
             <img
-              src="../public/logo.png"
+              src="/logo.png"
               className="w-16 text-blue-400"
               alt="logo"
             />
