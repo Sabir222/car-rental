@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="bg-white  w-full sm:h-[70px] h-[300px] shadow-lg">
         <div className="flex max-w-[1300px] mx-auto md:items-center justify-between">
           <div className=" p-4  flex gap-8 flex-col sm:flex-row">
-            <img src="car-rental/src/assets/logo.png" className="w-16" alt="logo" />
+            <img src="public/logo.png" className="w-16" alt="logo" />
             <input
               type="text"
               className="border rounded-3xl sm:w-[350px] h-10 px-7 w-[300px]"
@@ -26,13 +26,19 @@ const Navbar = () => {
             <div className="md:flex gap-6 pr-10 hidden ">
               <ul className="flex gap-7">
                 <li className="text-[#3D5278]">
-                  <a  className="text-[#3D5278]" href="/services">Services</a>
+                  <a className="text-[#3D5278]" href="/services">
+                    Services
+                  </a>
                 </li>
                 <li>
-                  <a  className="text-[#3D5278]" href="/about">About us</a>
+                  <a className="text-[#3D5278]" href="/about">
+                    About us
+                  </a>
                 </li>
                 <li>
-                  <a className="text-[#3D5278]" href="/contact">Contact</a>
+                  <a className="text-[#3D5278]" href="/contact">
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>
