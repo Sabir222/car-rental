@@ -6,29 +6,28 @@ const Navbar = () => {
   const handleClick = () => {
     setNav(!nav);
   };
-
   return (
     <div>
       <div className="bg-white  w-full sm:h-[70px] h-[300px] shadow-lg">
         <div className="flex max-w-[1300px] mx-auto md:items-center justify-between">
-          <div className=" px-10 pt-2  flex gap-8 flex-col sm:flex-row">
+          <div className="flex flex-col gap-8 px-10 pt-2 sm:flex-row">
             <img src="/logo.png" className="w-16 text-blue-400" alt="logo" />
             <div className="relative">
               <input
                 type="text"
-                className="border  rounded-3xl sm:w-[350px] h-10 px-12 w-[300px]"
+                className="border  rounded-3xl sm:w-[300px] h-10 px-12 w-[90%]"
                 placeholder="Search something here..."
               />
-              <div className="absolute inset-y-0 left-4  flex items-center pointer-events-none">
+              <div className="absolute inset-y-0 flex items-center pointer-events-none left-4">
                 <AiOutlineSearch size={20} color="#808080" className="" />
               </div>
             </div>
           </div>
-          <div className=" p-2 md:flex">
+          <div className="p-2 md:flex">
             <button onClick={handleClick}>
               <AiOutlineMenu size={30} className="md:hidden text-[#3D5278]" />
             </button>
-            <div className="md:flex gap-6 pr-10 hidden ">
+            <div className="hidden gap-6 pr-10 md:flex ">
               <ul className="flex gap-7">
                 <li className="text-[#3D5278]">
                   <a className="text-[#3D5278] font-semibold" href="/services">
@@ -57,7 +56,7 @@ const Navbar = () => {
             : "fixed left-[-100%]"
         }
       >
-        <div className="p-2 flex justify-end">
+        <div className="flex justify-end p-2">
           <button onClick={handleClick}>
             <AiOutlineClose size={30} className="text-[#3D5278]" />
           </button>

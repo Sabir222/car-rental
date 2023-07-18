@@ -12,7 +12,7 @@ const Footer = () => {
               Our objective is to provide comfort.
             </p>
           </div>
-          <div className="flex  text-2xl flex-wrap p-6">
+          <div className="flex flex-wrap p-6 text-xl">
             <div className="pr-[35px] pb-10 flex flex-col">
               <div className="font-bold pb-4 text-[#1A202C]">
                 <a href="/about">About</a>
@@ -35,13 +35,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="pb-6 border-t-1 border-gray-300 " />
+        <hr className="pb-6 border-gray-300 border-t-1 " />
 
-        <div className="p-6 flex flex-col font-semibold md:flex-row md:justify-between md:px-6">
+        <div className="flex flex-col p-6 text-sm font-semibold md:flex-row md:justify-between md:px-6">
           <div className="order-2 md:order-1">
             <p>2023 GearShifters . All rights reserved</p>
           </div>
-          <div className="order-1 md:order-2 flex justify-between pb-6">
+          <div className="flex justify-between order-1 pb-6 md:order-2">
             <p>Policy & Privacy</p>
             <p>Terms & Conditions</p>
           </div>
