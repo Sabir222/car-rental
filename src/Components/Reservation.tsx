@@ -12,14 +12,14 @@ const Reservation = () => {
   };
   return (
     <div className="p-6 pt-[100px] md:pt-[0]">
-      <div className="p-4 m-2  bg-white rounded-2xl  max-w-[1400px] mx-auto">
+      <div className="p-4 mt-2  bg-white rounded-2xl  max-w-[1400px] mx-auto">
         <h1 className="mb-6 text-3xl font-bold text-blue-700">book a car</h1>
         <div className="flex flex-col md:flex-row md:flex-wrap md:gap-5 md:justify-center">
           <div className="mb-6 md:w-[25%]">
             <div className="flex items-center">
               <AiFillCar className="text-blue-700" />
               <h1 className="px-2 pb-1">
-                Select your car type
+                Select your car 
                 <span className="text-blue-700"> &#42;</span>
               </h1>
             </div>
