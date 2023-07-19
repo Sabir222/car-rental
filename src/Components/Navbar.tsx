@@ -34,8 +34,8 @@ const Navbar = () => {
             <div className="hidden gap-6 pr-10 md:flex ">
               <ul className="flex gap-7">
                 <li className="text-[#3D5278]">
-                  <Link className="text-[#3D5278] font-semibold" to="/services">
-                    Services
+                  <Link className="text-[#3D5278] font-semibold" to="/">
+                    Home
                   </Link>
                 </li>
                 <li>
@@ -67,8 +67,8 @@ const Navbar = () => {
         </div>
         <ul className="flex gap-32  flex-col justify-center items-center text-5xl font-semi-bold h-[100vh]">
           <li>
-            <Link className="text-[#3D5278]" to="/services">
-              Services
+            <Link className="text-[#3D5278]" to="/">
+              Home
             </Link>
           </li>
           <li>

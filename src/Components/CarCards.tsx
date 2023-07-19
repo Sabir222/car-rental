@@ -1,22 +1,21 @@
-import { AiFillHeart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { GiGearStick } from "react-icons/gi";
 import { BiGasPump } from "react-icons/bi";
 import { BsFillPeopleFill } from "react-icons/bs";
-interface Car {
-  name: string;
-  type: string;
-  picture: string;
-  litres: number;
-  gear: string;
-  capacity: number;
-  price: number;
-}
+import { Car } from "../cars";
+import { useState } from "react";
+
 interface CarCardsProps {
   cars: Car[];
 }
-
 const CarCards: React.FC<CarCardsProps> = (props) => {
-  const cars = props.cars;
+  const [cars, setCars] = useState<Car[]>(props.cars.slice(1));
+  const toggleHeart = (carId: number) => {
+    const heartedcar = cars.map((car) => {
+      return car.id === carId ? { ...car, liked: !car.liked } : car;
+    });
+    setCars(heartedcar);
+  };
   return (
     <div className="flex flex-col items-center pb-10 ">
       <div className="justify-center sm:flex-wrap sm:flex max-w-[1400px] mx-auto ">
@@ -30,7 +29,13 @@ const CarCards: React.FC<CarCardsProps> = (props) => {
                     <p className="text-gray-600">{car.type}</p>
                   </div>
                   <div>
-                    <AiFillHeart className="text-red-700" />
+                    <button onClick={() => toggleHeart(car.id)}>
+                      {car.liked ? (
+                        <AiFillHeart className="text-red-700" />
+                      ) : (
+                        <AiOutlineHeart />
+                      )}
+                    </button>
                   </div>
                 </div>
                 <div className="flex items-center justify-between pb-4 sm:flex-col">

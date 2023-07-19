@@ -1,60 +1,61 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { cars } from "../cars";
 
-const people = [
-  {
-    id: 1,
-    name: "Select Car",
-    avatar: "/logo.png",
-  },
-  {
-    id: 2,
-    name: "Rolls Roys",
-    avatar: "/rolls.png",
-  },
-  {
-    id: 3,
-    name: "Duster",
-    avatar: "/duster.png",
-  },
-  {
-    id: 4,
-    name: "Mercedes G AMG",
-    avatar: "amg.png",
-  },
-  {
-    id: 5,
-    name: "Ferrari",
-    avatar: "ferrari.png",
-  },
-  {
-    id: 6,
-    name: "Bugatti",
-    avatar: "bugatti.png",
-  },
-  {
-    id: 7,
-    name: "Chevrolet Camaro",
-    avatar: "camaro.png",
-  },
-  {
-    id: 8,
-    name: "Ford Mustang",
-    avatar: "mustang.png",
-  },
-  {
-    id: 9,
-    name: "Bently Continental",
-    avatar: "bently.png",
-  },
-];
+// const cars = [
+//   {
+//     id: 1,
+//     name: "Select Car",
+//     avatar: "/logo.png",
+//   },
+//   {
+//     id: 2,
+//     name: "Rolls Roys",
+//     avatar: "/rolls.png",
+//   },
+//   {
+//     id: 3,
+//     name: "Duster",
+//     avatar: "/duster.png",
+//   },
+//   {
+//     id: 4,
+//     name: "Mercedes G AMG",
+//     avatar: "amg.png",
+//   },
+//   {
+//     id: 5,
+//     name: "Ferrari",
+//     avatar: "ferrari.png",
+//   },
+//   {
+//     id: 6,
+//     name: "Bugatti",
+//     avatar: "bugatti.png",
+//   },
+//   {
+//     id: 7,
+//     name: "Chevrolet Camaro",
+//     avatar: "camaro.png",
+//   },
+//   {
+//     id: 8,
+//     name: "Ford Mustang",
+//     avatar: "mustang.png",
+//   },
+//   {
+//     id: 9,
+//     name: "Bently Continental",
+//     avatar: "bently.png",
+//   },
+// ];
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
 export default function SelectCar() {
-  const [selected, setSelected] = useState(people[0]);
+  const [selected, setSelected] = useState(cars[0]);
   console.log(selected);
 
   return (
@@ -65,7 +66,7 @@ export default function SelectCar() {
             <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
               <span className="flex items-center">
                 <img
-                  src={selected.avatar}
+                  src={selected.picture}
                   alt=""
                   className="flex-shrink-0 w-5 h-5 rounded-full"
                 />
@@ -87,7 +88,7 @@ export default function SelectCar() {
               leaveTo="opacity-0"
             >
               <Listbox.Options className="absolute z-10 w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-56 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                {people.map((person) => (
+                {cars.map((person) => (
                   <Listbox.Option
                     key={person.id}
                     className={({ active }) =>
@@ -102,7 +103,7 @@ export default function SelectCar() {
                       <>
                         <div className="flex items-center">
                           <img
-                            src={person.avatar}
+                            src={person.picture}
                             alt=""
                             className="flex-shrink-0 object-cover w-5 h-5 rounded-full"
                           />
