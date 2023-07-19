@@ -23,7 +23,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="p-2 md:flex">
+          <div className="p-0 md:flex">
             <button onClick={handleClick}>
               <AiOutlineMenu size={30} className="md:hidden text-[#3D5278]" />
             </button>
