@@ -21,7 +21,7 @@ const CarCards: React.FC<CarCardsProps> = (props) => {
     <>
       {cars.map((car, index) => {
         return (
-          <div className="px-6 pb-10" key={index}>
+          <div className="px-6 pb-10 " key={index}>
             <div className="p-4 bg-white  sm:flex sm:flex-col sm:justify-between shadow-sm rounded-2xl sm:w-[250px] sm:h-[300px]">
               <div className="flex justify-between pb-4">
                 <div>

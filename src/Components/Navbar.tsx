@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
@@ -11,7 +12,10 @@ const Navbar = () => {
       <div className="bg-white  w-full md:h-[70px] h-[300px] shadow-lg">
         <div className="flex max-w-[1300px] mx-auto md:items-center justify-between">
           <div className="flex flex-col gap-8 px-10 pt-2 sm:flex-row">
-            <img src="/logo.png" className="w-16 text-blue-400" alt="logo" />
+            <Link to="/">
+              {" "}
+              <img src="/logo.png" className="w-16 text-blue-400" alt="logo" />
+            </Link>
             <div className="relative">
               <input
                 type="text"
@@ -30,19 +34,19 @@ const Navbar = () => {
             <div className="hidden gap-6 pr-10 md:flex ">
               <ul className="flex gap-7">
                 <li className="text-[#3D5278]">
-                  <a className="text-[#3D5278] font-semibold" href="/services">
+                  <Link className="text-[#3D5278] font-semibold" to="/services">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-[#3D5278] font-semibold" href="/about">
+                  <Link className="text-[#3D5278] font-semibold" to="/about">
                     About us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-[#3D5278] font-semibold" href="/contact">
+                  <Link className="text-[#3D5278] font-semibold" to="/contact">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -63,19 +67,19 @@ const Navbar = () => {
         </div>
         <ul className="flex gap-32  flex-col justify-center items-center text-5xl font-semi-bold h-[100vh]">
           <li>
-            <a className="text-[#3D5278]" href="/services">
+            <Link className="text-[#3D5278]" to="/services">
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="text-[#3D5278]" href="/about">
+            <Link className="text-[#3D5278]" to="/about">
               About us
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="text-[#3D5278]" href="/contact">
+            <Link className="text-[#3D5278]" to="/contact">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

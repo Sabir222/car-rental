@@ -1,38 +1,18 @@
-import CarCards from "./Components/CarCards";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer";
-import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
-import Reservation from "./Components/Reservation";
+import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
+import Contact from "./Pages/Contact";
 function App() {
-  const cars = [
-    {
-      name: "Rolls roys",
-      picture: "/rolls.png",
-      gear: "automatic",
-      type: "luxury saloon",
-      capacity: 6,
-      price: 90,
-      litres: 70,
-    },
-    {
-      name: "duster",
-      picture: "/duster.png",
-      gear: "manual",
-      type: "SUV",
-      capacity: 6,
-      price: 50,
-      litres: 70,
-    },
-  ];
   return (
     <>
       <Navbar />
-      <Hero />
-      <Reservation />
-      <div className="justify-center sm:flex-wrap sm:flex">
-        <CarCards cars={cars} />
-      </div>
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </>
   );
