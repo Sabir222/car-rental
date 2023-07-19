@@ -1,3 +1,4 @@
+import DefaultAccordion from "../Components/Accordion";
 import CarCards from "../Components/CarCards";
 import Hero from "../Components/Hero";
 import Reservation from "../Components/Reservation";
@@ -14,7 +15,7 @@ const Home = () => {
       litres: 70,
     },
     {
-      name: "duster",
+      name: "Duster",
       picture: "/duster.png",
       gear: "manual",
       type: "SUV",
@@ -78,13 +79,13 @@ const Home = () => {
     },
   ];
   return (
-    <>
+    <div className="min-h-[100vh]">
       <Hero />
       <Reservation />
-      <div className="justify-center sm:flex-wrap sm:flex max-w-[1400px] mx-auto">
-        <CarCards cars={cars} />
-      </div>
-    </>
+
+      <CarCards cars={cars} />
+      <DefaultAccordion />
+    </div>
   );
 };
 

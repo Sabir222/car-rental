@@ -12,7 +12,7 @@ const Footer = () => {
               Our objective is to provide comfort.
             </p>
           </div>
-          <div className="flex flex-wrap p-6 text-xl">
+          <div className="flex flex-wrap p-6 text-md">
             <div className="pr-[35px] pb-10 flex flex-col">
               <div className="font-bold pb-4 text-[#1A202C]">
                 <a href="/about">About</a>

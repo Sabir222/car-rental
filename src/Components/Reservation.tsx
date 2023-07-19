@@ -4,12 +4,14 @@ import SelectCar from "./SelectCarMenu";
 import SelectCity from "./selectCityMenu";
 import Datepicker from "react-tailwindcss-datepicker";
 import { useState } from "react";
+import { DateValueType } from "react-tailwindcss-datepicker/dist/types";
 const Reservation = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
   };
+  console.log(selectedDate);
+
   return (
     <div className="p-6 pt-[100px] md:pt-[0]">
       <div className="p-4 mt-2  bg-white rounded-2xl  max-w-[1400px] mx-auto">
@@ -19,7 +21,7 @@ const Reservation = () => {
             <div className="flex items-center">
               <AiFillCar className="text-blue-700" />
               <h1 className="px-2 pb-1">
-                Select your car 
+                Select your car
                 <span className="text-blue-700"> &#42;</span>
               </h1>
             </div>
@@ -45,7 +47,6 @@ const Reservation = () => {
                 <span className="text-blue-700"> &#42;</span>
               </h1>
             </div>
-
             <SelectCity />
           </div>
           <div className="mb-6 md:w-[25%]">

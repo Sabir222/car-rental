@@ -44,7 +44,7 @@ const people = [
     avatar: "mustang.png",
   },
   {
-    id: 8,
+    id: 9,
     name: "Bently Continental",
     avatar: "bently.png",
   },
@@ -53,9 +53,9 @@ const people = [
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
-
 export default function SelectCar() {
   const [selected, setSelected] = useState(people[0]);
+  console.log(selected);
 
   return (
     <Listbox value={selected} onChange={setSelected}>
