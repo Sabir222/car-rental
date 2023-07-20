@@ -4,8 +4,6 @@ import { BiGasPump } from "react-icons/bi";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { Car } from "../cars";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
 interface CarCardsProps {
   cars: Car[];
 }
