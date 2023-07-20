@@ -2,11 +2,11 @@ import { BiSolidQuoteAltRight } from "react-icons/bi";
 
 const Testimonial = () => {
   return (
-    <div className="max-w-[1400px] mx-auto mb-10">
+    <div className="max-w-[1400px] mx-auto mb-[90px] mt-[70px]">
       <div className="flex flex-col items-center justify-center px-6 text-center">
-        <p className="mb-2 text-xl font-semibold">Reviewed by People</p>
-        <p className="mb-2 text-5xl font-bold text-blue-700">Client's Testimonials</p>
-        <p className="text-[#90A3BF]">
+        <p className="mb-4 text-xl font-semibold">Reviewed by People</p>
+        <p className="mb-4 text-5xl font-bold text-blue-700">Client's Testimonials</p>
+        <p className="text-[#90A3BF] m-8">
           Discover the positive impact we've made on the our clients by reading
           through their testimonials. Our clients have experienced our service
           and results, and they're eager to share their positive experiences

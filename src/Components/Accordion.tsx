@@ -2,7 +2,7 @@ import { Accordion } from "flowbite-react";
 
 export default function DefaultAccordion() {
   return (
-    <div className="px-6 pb-10 max-w-[1400px] mx-auto">
+    <div className="px-6 max-w-[1400px] mx-auto mb-[70px] mt-[70px]">
       <Accordion className="bg-white">
         <Accordion.Panel className="">
           <Accordion.Title className="text-blue-700 bg-white">
