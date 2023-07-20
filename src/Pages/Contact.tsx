@@ -31,8 +31,8 @@ const Contact = () => {
               <p className="font-semibold">Your message</p>
               <textarea
                 placeholder="Write you message here..."
-                cols="30"
-                rows="8"
+                cols={30}
+                rows={8}
                 className="rounded-lg bg-[#F6F7F9] mb-4"
               ></textarea>
             </div>
