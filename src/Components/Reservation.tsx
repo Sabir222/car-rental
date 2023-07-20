@@ -2,16 +2,8 @@ import { AiFillCar, AiOutlineFieldTime } from "react-icons/ai";
 import { FaArrowRightToCity, FaLocationDot } from "react-icons/fa6";
 import SelectCar from "./SelectCarMenu";
 import SelectCity from "./selectCityMenu";
-import Datepicker from "react-tailwindcss-datepicker";
-import { useState } from "react";
-import { DateValueType } from "react-tailwindcss-datepicker/dist/types";
+import DatePickerComp from "./DatePicker";
 const Reservation = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
-  const handleDateChange = (date: Date | null) => {
-    setSelectedDate(date);
-  };
-  console.log(selectedDate);
-
   return (
     <div className="p-6 pt-[100px] md:pt-[0]">
       <div className="p-4 mt-2  bg-white rounded-2xl  max-w-[1400px] mx-auto">
@@ -57,8 +49,8 @@ const Reservation = () => {
                 <span className="text-blue-700"> &#42;</span>
               </h1>
             </div>
-
-            <Datepicker value={selectedDate} onChange={handleDateChange} />
+            <DatePickerComp />
+            {/* <Datepicker value={selectedDate} onChange={handleDateChange} /> */}
           </div>
         </div>
       </div>
