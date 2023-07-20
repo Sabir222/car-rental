@@ -4,7 +4,7 @@ import { cars } from "../cars";
 
 const Cars = () => {
   return (
-    <div>
+    <div className="min-h-[100vh]">
       <Hero />
       <div className="max-w-[1400px] mx-auto mt-[50px]">
         <div className="flex flex-col">
