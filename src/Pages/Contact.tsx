@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
-    <div className="min-h-[100vh] max-w-[1400px]">
-      <div className="min-h-screen   absolute md:static top-[150px] left-6  mx-auto flex items-center justify-center  p-6">
+    <div className="min-h-[100vh]  ">
+      <div className="min-h-screen max-w-[1400px]  absolute md:static top-[150px] left-6  mx-auto flex items-center justify-center  p-6">
         <div className="p-2 bg-white shadow-xl md- rounded-xl md:p-8">
           <div className="flex flex-col items-center justify-center">
             <p className="text-4xl text-blue-700 ">Contact Us</p>
