@@ -7,13 +7,13 @@ const Navbar = () => {
   const handleClick = () => {
     setNav(!nav);
   };
+
   return (
     <div>
       <div className="bg-white  w-full md:h-[70px] h-[300px] shadow-lg">
         <div className="flex max-w-[1300px] mx-auto md:items-center justify-between">
           <div className="flex flex-col gap-8 px-10 pt-2 sm:flex-row">
             <Link to="/">
-              {" "}
               <img src="/logo.png" className="w-16 text-blue-400" alt="logo" />
             </Link>
             <div className="relative">
@@ -56,7 +56,7 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? "md:hidden z-10 fixed top-0 left-0  bg-white opacity-100 w-full ease-in-out duration-700"
+            ? "md:hidden z-10 fixed top-0 left-0    bg-white opacity-100 w-full ease-in-out duration-700"
             : "fixed left-[-100%]"
         }
       >
@@ -66,17 +66,17 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="flex gap-32  flex-col justify-center items-center text-5xl font-semi-bold h-[100vh]">
-          <li>
+          <li onClick={() => setNav(false)}>
             <Link className="text-[#3D5278]" to="/">
               Home
             </Link>
           </li>
-          <li>
+          <li onClick={() => setNav(false)}>
             <Link className="text-[#3D5278]" to="/about">
               About us
             </Link>
           </li>
-          <li>
+          <li onClick={() => setNav(false)}>
             <Link className="text-[#3D5278]" to="/contact">
               Contact
             </Link>

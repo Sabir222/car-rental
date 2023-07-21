@@ -3,6 +3,7 @@ import { FaArrowRightToCity, FaLocationDot } from "react-icons/fa6";
 import SelectCar from "./SelectCarMenu";
 import SelectCity from "./selectCityMenu";
 import DatePickerComp from "./DatePicker";
+import SelectDropCity from "./SelectDropCity";
 const Reservation = () => {
   return (
     <div className="p-6 pt-[100px] md:pt-[0]">
@@ -39,7 +40,7 @@ const Reservation = () => {
                 <span className="text-blue-700"> &#42;</span>
               </h1>
             </div>
-            <SelectCity />
+            <SelectDropCity />
           </div>
           <div className="mb-6 md:w-[25%]">
             <div className="flex items-center">

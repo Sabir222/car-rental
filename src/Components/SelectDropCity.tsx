@@ -7,7 +7,7 @@ function classNames(...classes: unknown[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function SelectCity() {
+export default function SelectDropCity() {
   const [selected, setSelected] = useState(cities[0]);
   console.log(selected);
 
