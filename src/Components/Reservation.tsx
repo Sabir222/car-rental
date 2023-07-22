@@ -4,7 +4,19 @@ import SelectCar from "./SelectCarMenu";
 import SelectCity from "./selectCityMenu";
 import DatePickerComp from "./DatePicker";
 import SelectDropCity from "./SelectDropCity";
+import { useState } from "react";
+interface DateValue {
+  startDate: Date | null;
+  endDate: Date | null;
+}
 const Reservation = () => {
+  const [dateData, setDateData] = useState<DateValue[]>([]);
+  const handleDateData = (data: DateValue[]) => {
+    setDateData(data);
+  };
+  console.log(dateData[0]?.startDate);
+  console.log(dateData[0]?.endDate);
+
   return (
     <div className="p-6 pt-[100px] md:pt-[0]">
       <div className="p-4 mt-2  bg-white rounded-2xl  max-w-[1400px] mx-auto">
@@ -50,7 +62,7 @@ const Reservation = () => {
                 <span className="text-blue-700"> &#42;</span>
               </h1>
             </div>
-            <DatePickerComp />
+            <DatePickerComp DateData={handleDateData} />
             {/* <Datepicker value={selectedDate} onChange={handleDateChange} /> */}
           </div>
         </div>

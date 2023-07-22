@@ -5,18 +5,20 @@ interface DateValue {
   startDate: Date | null;
   endDate: Date | null;
 }
-const DatePickerComp = () => {
+interface ReservationDataProps {
+  DateData: (data: DateValue[]) => void;
+}
+
+const DatePickerComp = ({ DateData }: ReservationDataProps) => {
   const [value, setValue] = useState<DateValue>({
     startDate: null,
     endDate: null,
   });
   const handleDateChange = (date: DateValue) => {
     setValue(date);
+    DateData([date]);
   };
-  // const handleValueChange = (newValue: DateValue) => {
-  //   console.log("newValue:", newValue);
-  //   setValue(newValue);
-  // };
+
   return (
     <Datepicker
       value={value}
@@ -27,5 +29,3 @@ const DatePickerComp = () => {
 };
 
 export default DatePickerComp;
-
-

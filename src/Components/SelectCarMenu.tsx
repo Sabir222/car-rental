@@ -3,60 +3,12 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { cars } from "../cars";
 
-// const cars = [
-//   {
-//     id: 1,
-//     name: "Select Car",
-//     avatar: "/logo.png",
-//   },
-//   {
-//     id: 2,
-//     name: "Rolls Roys",
-//     avatar: "/rolls.png",
-//   },
-//   {
-//     id: 3,
-//     name: "Duster",
-//     avatar: "/duster.png",
-//   },
-//   {
-//     id: 4,
-//     name: "Mercedes G AMG",
-//     avatar: "amg.png",
-//   },
-//   {
-//     id: 5,
-//     name: "Ferrari",
-//     avatar: "ferrari.png",
-//   },
-//   {
-//     id: 6,
-//     name: "Bugatti",
-//     avatar: "bugatti.png",
-//   },
-//   {
-//     id: 7,
-//     name: "Chevrolet Camaro",
-//     avatar: "camaro.png",
-//   },
-//   {
-//     id: 8,
-//     name: "Ford Mustang",
-//     avatar: "mustang.png",
-//   },
-//   {
-//     id: 9,
-//     name: "Bently Continental",
-//     avatar: "bently.png",
-//   },
-// ];
-
-function classNames(...classes: any[]) {
+function classNames(...classes: unknown[]) {
   return classes.filter(Boolean).join(" ");
 }
 export default function SelectCar() {
   const [selected, setSelected] = useState(cars[0]);
-  console.log(selected);
+  
 
   return (
     <Listbox value={selected} onChange={setSelected}>

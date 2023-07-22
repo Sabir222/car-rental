@@ -7,9 +7,10 @@ function classNames(...classes: unknown[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+
+
 export default function SelectCity() {
   const [selected, setSelected] = useState(cities[0]);
-  console.log(selected);
 
   return (
     <Listbox value={selected} onChange={setSelected}>

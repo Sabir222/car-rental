@@ -9,7 +9,6 @@ function classNames(...classes: unknown[]) {
 
 export default function SelectDropCity() {
   const [selected, setSelected] = useState(cities[0]);
-  console.log(selected);
 
   return (
     <Listbox value={selected} onChange={setSelected}>
